@@ -1,0 +1,33 @@
+// General Basic Variables and elements setup
+$global-font-size: 100% !default;
+$global-width: rem-calc(1400) !default;
+
+$palette: (
+  primary: #1779ba,
+  secondary: #767676,
+) !default;
+
+$black: #0a0a0a !default;
+$white: #fff !default;
+$light-gray: #e6e6e6 !default;
+$medium-gray: #cacaca !default;
+$dark-gray: #8a8a8a !default;
+
+$body-font-color: $black !default;
+
+/// Font stack of the body.
+$body-font-family: 'Roboto', sans-serif !default;
+$body-antialiased: true !default;
+
+//Fonts Weights
+$global-weight-normal: 400 !default;
+$global-weight-bold: 500 !default;
+$global-lineheight: 1.5;
+
+$global-button-cursor: auto !default;
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px
+) !default;

@@ -1,0 +1,51 @@
+// -----------  BASE STYLES ---------- //
+
+html {
+  box-sizing: border-box;
+  font-size: $global-font-size;
+}
+
+*,
+*::before,
+*::after { box-sizing: inherit; }
+
+body {
+  color: $body-font-color;
+  font-family: $body-font-family;
+  font-weight: $global-weight-normal;
+  line-height: $global-lineheight;
+  margin: 0;
+  padding: 0;
+
+  @if ($body-antialiased) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: $global-button-cursor;
+  line-height: 1;
+  padding: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea { font-family: inherit; }
+
+.container {
+  max-width: $global-width;
+}

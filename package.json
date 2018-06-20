@@ -1,22 +1,8 @@
 {
-  "name": "npm-build-boilerplate",
-  "version": "1.2.0",
-  "description": "A set of common build tasks written with npm scripts.",
-  "author": "Damon Bauer <hello@damonbauer.me>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/damonbauer/npm-build-boilerplate"
-  },
-  "bugs": "https://github.com/damonbauer/npm-build-boilerplate/issues",
-  "keywords": [
-    "npm",
-    "scripts",
-    "npm scripts",
-    "watch",
-    "minify",
-    "compress"
-  ],
+  "name": "frontend-trial",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": ".eslintrc.js",
   "scripts": {
     "clean": "rimraf dist/{css/*,js/*,images/*}",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
@@ -37,6 +23,15 @@
     "watch": "run-p serve watch:*",
     "postinstall": "run-s build watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mojouy/htmlPlain.git"
+  },
+  "author": "Mojo <mojotec@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mojouy/htmlPlain/issues"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.8",
@@ -51,9 +46,13 @@
     "onchange": "^2.4.0",
     "postcss-cli": "^2.5.2",
     "rimraf": "^2.5.4",
-    "stylelint": "^7.8.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.3",
     "svg-sprite-generator": "0.0.7",
     "svgo": "^0.6.6",
     "uglify-js": "^2.6.2"
-  }
+  },
+  "homepage": "https://github.com/mojouy/htmlPlain#readme"
 }

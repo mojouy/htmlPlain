@@ -1,4 +1,4 @@
-# Test Template
+# Html Template
 
 * [List of packages used](#list-of-packages-used)
 * [Using in your project](#using-in-your-project)
@@ -9,7 +9,7 @@
 
 Many, many thanks go out to Keith Cirkel for [his post](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/) and his useful CLI tools!
 
-## Using in your project
+## Usage
 * First, ensure that node.js & npm are both installed. If not, choose your OS and installation method from [this page](https://nodejs.org/en/download/package-manager/) and follow the instructions.
 * Next, run `npm install` to install all of the dependencies into your project.
 

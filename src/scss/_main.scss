@@ -118,8 +118,7 @@ li { font-size: inherit; }
 ul { list-style-type: $list-style-type; }
 
 //Main container class
-[class^="container"] {
-  display: flex;
+.container {
   margin: 0 rem-calc(20);
   max-width: $global-width;
 }

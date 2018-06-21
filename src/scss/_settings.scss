@@ -23,12 +23,15 @@ $global-weight-bold: 500 !default;
 $global-lineheight: 1.5;
 
 $global-button-cursor: auto !default;
+$screen: "only screen" !default;
 
 $breakpoints: (
   small: 0,
   medium: 640px,
   large: 1024px
 ) !default;
+
+$small-only: "#{$screen} and (max-width: #{map-get($breakpoints, medium) - 1})" !default;
 
 $header-font-family: $body-font-family !default;
 $header-font-weight: $global-weight-normal !default;
@@ -59,3 +62,13 @@ $list-lineheight: $paragraph-lineheight !default;
 $list-margin-bottom: $paragraph-margin-bottom !default;
 $list-style-type: disc !default;
 $list-style-position: outside !default;
+
+// Transition timings
+$transition-fast: .25s;
+$transition-normal: .5s;
+$transition-slow: 1s;
+$transition-in-out: ease-in-out;
+$transition-in: ease-in;
+$transition-out: ease-out;
+$transition-default: $transition-fast $transition-in-out;
+$single-transition-default: $transition-fast, $transition-in-out;

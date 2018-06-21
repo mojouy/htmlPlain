@@ -34,19 +34,19 @@ $breakpoints: (
 $small-only: "#{$screen} and (max-width: #{map-get($breakpoints, medium) - 1})" !default;
 
 $header-font-family: $body-font-family !default;
-$header-font-weight: $global-weight-normal !default;
+$header-font-weight: $global-weight-bold !default;
 $header-font-style: normal !default;
 $header-color: inherit !default;
 $header-lineheight: 1.4 !default;
-$header-margin-bottom: .5rem !default;
+$header-margin-bottom: .6rem !default;
 
 $header-styles: (
-  'h1': ('font-size': 48),
-  'h2': ('font-size': 40),
-  'h3': ('font-size': 31),
-  'h4': ('font-size': 25),
-  'h5': ('font-size': 20),
-  'h6': ('font-size': 16),
+  'h1': rem-calc(48),
+  'h2': rem-calc(40),
+  'h3': rem-calc(31),
+  'h4': rem-calc(25),
+  'h5': rem-calc(20),
+  'h6': rem-calc(16),
 ) !default;
 
 $header-text-rendering: optimizeLegibility !default;
@@ -72,3 +72,7 @@ $transition-in: ease-in;
 $transition-out: ease-out;
 $transition-default: $transition-fast $transition-in-out;
 $single-transition-default: $transition-fast, $transition-in-out;
+
+//Navigation
+$mobile-nav-height: rem-calc(60);
+$nav-margin-bottom: rem-calc(25);

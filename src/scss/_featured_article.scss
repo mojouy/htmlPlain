@@ -1,12 +1,14 @@
 //Featured Article
 .featured-article {
   $thumbnails-length: 5;
+  $sections-spacing: rem-calc(30);
 
-  margin-bottom: rem-calc(30);
+  margin-bottom: $sections-spacing;
 
   .featured-article__gallery {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: $sections-spacing;
   }
 
   .featured-article__video,
@@ -91,4 +93,8 @@
       width: 40%;
     }
   }//breakpoint large
+
+  .featured-article__description {
+    p { color: $dark-gray; }
+  }
 }//featured article

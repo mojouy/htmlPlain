@@ -21,7 +21,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-}
+
+  @media #{$small-only} { padding-top: $mobile-nav-height + $nav-margin-bottom; }
+}//body
 
 img {
   display: inline-block;
@@ -87,7 +89,18 @@ h6 {
   font-family: $header-font-family;
   font-style: $header-font-style;
   font-weight: $header-font-weight;
+  margin-bottom: $header-margin-bottom;
   text-rendering: $header-text-rendering;
+}
+
+@for $i from 1 through 5 {
+  h#{$i} {
+    $font-size: map-get($header-styles, h#{$i});
+
+    font-size: $font-size;
+
+    @media #{$small-only} { font-size: $font-size * .9; }
+  }
 }
 
 // Links

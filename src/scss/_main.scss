@@ -46,6 +46,80 @@ optgroup,
 select,
 textarea { font-family: inherit; }
 
-.container {
+// Typography resets
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// Paragraphs
+p {
+  font-size: inherit;
+  line-height: $paragraph-lineheight;
+  margin-bottom: $paragraph-margin-bottom;
+  text-rendering: $paragraph-text-rendering;
+}
+
+// Strong text
+strong,
+b {
+  font-weight: $global-weight-bold;
+  line-height: inherit;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $header-color;
+  font-family: $header-font-family;
+  font-style: $header-font-style;
+  font-weight: $header-font-weight;
+  text-rendering: $header-text-rendering;
+}
+
+// Links
+a {
+  color: $anchor-color;
+  cursor: pointer;
+  line-height: inherit;
+  text-decoration: $anchor-text-decoration;
+
+  &:hover,
+  &:focus {
+    color: $anchor-color-hover;
+
+    @if $anchor-text-decoration-hover != $anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-hover;
+    }
+  }
+
+  img { border: 0; }
+}
+
+// Lists
+ul,
+ol { margin-bottom: $list-margin-bottom; }
+
+// List items
+li { font-size: inherit; }
+ul { list-style-type: $list-style-type; }
+
+//Main container class
+[class^="container"] {
+  display: flex;
+  margin: 0 rem-calc(20);
   max-width: $global-width;
 }

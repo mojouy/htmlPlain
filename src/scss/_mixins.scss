@@ -1,0 +1,109 @@
+
+// -----------  MIXINS ---------- //
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function val-to-rem($value, $base: null) {
+  // Check if the value is a number
+  @if type-of($value) != 'number' {
+    @warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
+
+    @return $value;
+  }
+
+  // Transform em into rem if someone hands over 'em's
+  @if unit($value) == 'em' {
+    $value: strip-unit($value) * 1rem;
+  }
+
+  // Calculate rem if units for $value is not rem or em
+  @if unit($value) != 'rem' {
+    $value: strip-unit($value) / strip-unit($base) * 1rem;
+  }
+
+  // Turn 0rem into 0
+  @if $value == 0rem { /* stylelint-disable-line length-zero-no-unit */
+    $value: 0;
+  }
+
+  @return $value;
+}
+
+@function rem-calc($values, $base: null) {
+  $rem-values: ();
+  $count: length($values);
+
+  // If no base is defined, defer to the global font size
+  @if $base == null {
+    $base: $global-font-size;
+  }
+
+  // If the base font size is a %, then multiply it by 16px
+  // This is because 100% font size = 16px in most all browsers
+  @if unit($base) == '%' {
+    $base: ($base / 100%) * 16px;
+  }
+
+  @if unit($base) == 'rem' {
+    $base: strip-unit($base) * 16px;
+  }
+
+  @if $count == 1 {
+    @return val-to-rem($values, $base);
+  }
+
+  @for $i from 1 through $count {
+    $rem-values: append($rem-values, val-to-rem(nth($values, $i), $base));
+  }
+
+  @return $rem-values;
+}
+
+@function color($key) {
+  @if map-has-key($palette, $key) {
+    @return map-get($palette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $palette.";
+
+  @return null;
+}
+
+$xs: ( max:  767px );
+$sm: ( min:  768px );
+$md: ( min:  992px );
+$lg: ( min: 1200px );
+$sm-only: ( min: map-get($sm, min), max: map-get($md, min) - 1 );
+$md-only: ( min: map-get($md, min), max: map-get($lg, min) - 1 );
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) { @content; }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

@@ -2,10 +2,8 @@
 $global-font-size: 100% !default;
 $global-width: rem-calc(1400) !default;
 
-$palette: (
-  primary: #1779ba,
-  secondary: #767676,
-) !default;
+$primary-color: #33a5f6 !default;
+$secondary-color: #212121 !default;
 
 $black: #0a0a0a !default;
 $white: #fff !default;
@@ -31,3 +29,33 @@ $breakpoints: (
   medium: 640px,
   large: 1024px
 ) !default;
+
+$header-font-family: $body-font-family !default;
+$header-font-weight: $global-weight-normal !default;
+$header-font-style: normal !default;
+$header-color: inherit !default;
+$header-lineheight: 1.4 !default;
+$header-margin-bottom: .5rem !default;
+
+$header-styles: (
+  'h1': ('font-size': 48),
+  'h2': ('font-size': 40),
+  'h3': ('font-size': 31),
+  'h4': ('font-size': 25),
+  'h5': ('font-size': 20),
+  'h6': ('font-size': 16),
+) !default;
+
+$header-text-rendering: optimizeLegibility !default;
+$paragraph-lineheight: 1.6 !default;
+$paragraph-margin-bottom: 1rem !default;
+$paragraph-text-rendering: optimizeLegibility !default;
+
+$anchor-color: $secondary-color !default;
+$anchor-color-hover: scale-color($anchor-color, $lightness: 25%) !default;
+$anchor-text-decoration: none !default;
+$anchor-text-decoration-hover: none !default;
+$list-lineheight: $paragraph-lineheight !default;
+$list-margin-bottom: $paragraph-margin-bottom !default;
+$list-style-type: disc !default;
+$list-style-position: outside !default;

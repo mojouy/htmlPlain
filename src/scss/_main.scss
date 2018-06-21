@@ -65,6 +65,7 @@ p {
 
 // Paragraphs
 p {
+  color: $dark-gray;
   font-size: inherit;
   line-height: $paragraph-lineheight;
   margin-bottom: $paragraph-margin-bottom;
@@ -132,6 +133,8 @@ ul { list-style-type: $list-style-type; }
 
 //Main container class
 .container {
-  margin: 0 rem-calc(20);
+  margin: 0 auto;
   max-width: $global-width;
+
+  @media #{$small-only} { margin: 0 rem-calc(20); }
 }

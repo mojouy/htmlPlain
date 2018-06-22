@@ -1,18 +1,6 @@
 
 // -----------  MIXINS ---------- //
 
-@mixin vertical-center {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@mixin horizontal-center {
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-}
-
 @mixin absolute-center {
   left: 50%;
   position: absolute;

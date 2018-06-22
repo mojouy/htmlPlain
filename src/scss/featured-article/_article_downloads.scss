@@ -1,0 +1,31 @@
+.featured-article__downloads {
+  margin-top: rem-calc(10);
+
+  @include respond-to(large) { margin-top: 0; }
+
+  h6 {
+    border-bottom: rem-calc(2) solid $secondary-color;
+    display: inline-block;
+    margin-bottom: rem-calc(20);
+    padding-bottom: rem-calc(5);
+  }
+
+  .links-list li { margin-bottom: rem-calc(5); }
+
+  @media #{$small-only} {
+    .links-list {
+      $border: 1px solid $medium-gray;
+
+      border: $border;
+      border-radius: 0 0 rem-calc(4 4);
+      text-align: center;
+
+      li {
+        margin-bottom: 0;
+        padding: rem-calc(5) 0;
+      }
+
+      li:not(:last-of-type) { border-bottom: $border; }
+    }
+  }
+}

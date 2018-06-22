@@ -1,0 +1,58 @@
+//Burger menu
+.burger-menu {
+  $burger-size: rem-calc(15);
+  $burger-border: rem-calc(1);
+  $burger-separation: rem-calc(5);
+
+  height: $burger-size;
+  position: relative;
+  width: $burger-size;
+
+  &.active {
+    position: absolute;
+    right: rem-calc(20);
+    z-index: 99999;
+  }//when action has been triggered
+
+  .menu-icn {
+    background-color: $secondary-color;
+    height: $burger-border;
+    left: 0;
+    position: absolute;
+    top: $burger-separation + $burger-border;
+    transition: width $transition-default;
+    width: $burger-size;
+
+    &::before,
+    &::after {
+      background-color: inherit;
+      content: '';
+      height: $burger-border;
+      left: 0;
+      position: absolute;
+      top: -$burger-separation;
+      transition: top, transform, width, $transition-default;
+      width: $burger-size;
+    }
+
+    &::after { top: $burger-separation; }
+  } // menu icn
+
+  &:hover .menu-icn,
+  &.active .menu-icn {
+    background-color: $success-color;
+    width: 0;
+
+    &::before,
+    &::after { top: 0; }
+
+    &::before { transform: rotate(90deg); }
+    &::after { width: $burger-size; }
+  } // menu:hover menu-icn
+
+  &.active .menu-icn {
+    background-color: $white;
+    &::before { transform: rotate(-45deg); }
+    &::after { transform: rotate(45deg); }
+  }
+} // menu

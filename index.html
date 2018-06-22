@@ -15,11 +15,17 @@
         <img src="/src/images/logo.png" alt="">
       </div><!-- Logo -->
 
-      <nav class="nav__menu">
-        <a class="nav__link nav__link--active" href="#">Videos</a>
-        <a class="nav__link" href="#">Channels</a>
-        <a class="nav__link" href="#">Help</a>
-        <a class="nav__link" href="#">Join</a>
+      <a href="#" class="burger-menu show--small-only">
+        <span class="menu-icn"></span>
+      </a>
+
+      <nav class="nav__menu hide--small-only">
+        <div class="nav-menu__wrapper">
+          <a class="nav__link nav__link--active" href="#">Videos</a>
+          <a class="nav__link" href="#">Channels</a>
+          <a class="nav__link" href="#">Help</a>
+          <a class="nav__link" href="#">Join</a>
+        </div>
       </nav><!-- Menu -->
     </div>
   </section><!-- Navigation -->
@@ -46,7 +52,7 @@
       <div class="featured-article__downloads">
         <div class="container">
           <h6 class="hide--small-only">Download Options</h6>
-          <a href="#" class="btn btn--block btn--icon-download btn--show-small">
+          <a href="#" class="btn btn--block btn--icon btn--icon-download btn--show-small">
             Download
           </a>
           <ul class="links-list hide--small-only">
@@ -167,6 +173,14 @@
       <a href="#" class="btn">More Videos</a>
     </div>
   </section><!-- More Articles section -->
+
+  <footer>
+    <div class="footer__wrapper">
+      <div class="container">
+        <span>This is where the footer should be :) 🥔</span>
+      </div>
+    </div>
+  </footer><!-- Footer -->
 
   <script src="dist/js/app.min.js"></script>
 </body>

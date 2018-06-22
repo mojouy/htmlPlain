@@ -1,0 +1,15 @@
+//Footer
+
+footer {
+  background-color: $secondary-color;
+  padding: rem-calc(20) 0;
+
+  span { color: $white; }
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: $global-width;
+  }
+}

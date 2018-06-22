@@ -34,8 +34,8 @@
       width: rem-calc(18);
     }//icon
 
-    &.rate-button--dislike::before { transform: rotate(180deg); }
-    &.rate-button--active { background-color: $success-color; }
+    &--dislike::before { transform: rotate(180deg); }
+    &--active { background-color: $success-color; }
 
     &:hover {
       background-color: $secondary-color;
@@ -72,7 +72,7 @@
   line-height: 1;
   padding: rem-calc(10 15);
 
-  &.article-score--small {
+  &--small {
     font-size: rem-calc(16);
     padding: rem-calc(8 13);
   }

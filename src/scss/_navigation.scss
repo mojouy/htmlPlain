@@ -13,7 +13,9 @@
     height: auto;
     padding: rem-calc(20) 0;
     position: relative;
-  }
+  }//nav medium up
+
+  &__logo { width: rem-calc(90); }//logo
 
   .container {
     align-items: center;
@@ -23,21 +25,50 @@
     justify-content: space-between;
   }
 
-  .nav__logo { width: rem-calc(90); }//logo
+  &__menu {
+    $gradient: (135deg, $success-color 0%, $primary-color 100%);
 
-  .nav__link {
-    color: $secondary-color;
-    font-size: rem-calc(14);
+    @media #{$small-only} {
+      background: linear-gradient($gradient);
+      height: 100vh;
+      left: 0;
+      padding: rem-calc(20);
+      position: fixed;
+      text-align: center;
+      top: 0;
+      width: 100vw;
+      z-index: 99;
+
+      .nav-menu__wrapper { @include absolute-center; }
+    }//small only
+  }//nav menu for mobile
+
+  &__link {
+    color: $white;
+    display: block;
+    font-size: rem-calc(20);
     text-transform: uppercase;
 
-    &:not(:last-of-type)::after {
-      content: '|';
-      margin-left: rem-calc(8);
-    }//separator
-  }//nav link
+    @media #{$small-only} {
+      &:not(:last-of-type) { margin-bottom: rem-calc(20); }
+    }
 
-  .nav__link--active {
-    color: $black;
-    font-weight: $global-weight-bold;
-  }
+    @include respond-to(medium) {
+      color: $secondary-color;
+      display: inline;
+      font-size: rem-calc(14);
+
+      &:not(:last-of-type)::after {
+        content: '|';
+        margin-left: rem-calc(8);
+      }//separator
+    }//medium up
+
+    &--active {
+      color: $white;
+      font-weight: $global-weight-bold;
+
+      @include respond-to(medium) { color: $black; }
+    }//nav active links
+  }//nav link
 }//navigation section

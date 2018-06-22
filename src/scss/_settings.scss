@@ -10,6 +10,8 @@ $white: #fff !default;
 $light-gray: #e6e6e6 !default;
 $medium-gray: #cacaca !default;
 $dark-gray: #8a8a8a !default;
+$success-color: #7cd394 !default;
+$alert-color: #d47979 !default;
 
 $body-font-color: $black !default;
 
@@ -19,7 +21,7 @@ $body-antialiased: true !default;
 
 //Fonts Weights
 $global-weight-normal: 400 !default;
-$global-weight-bold: 500 !default;
+$global-weight-bold: 700 !default;
 $global-lineheight: 1.5;
 
 $global-button-cursor: auto !default;
@@ -54,13 +56,13 @@ $paragraph-lineheight: 1.6 !default;
 $paragraph-margin-bottom: 1rem !default;
 $paragraph-text-rendering: optimizeLegibility !default;
 
-$anchor-color: $secondary-color !default;
+$anchor-color: $primary-color !default;
 $anchor-color-hover: scale-color($anchor-color, $lightness: 25%) !default;
 $anchor-text-decoration: none !default;
-$anchor-text-decoration-hover: none !default;
+$anchor-text-decoration-hover: underline !default;
 $list-lineheight: $paragraph-lineheight !default;
 $list-margin-bottom: $paragraph-margin-bottom !default;
-$list-style-type: disc !default;
+$list-style-type: none !default;
 $list-style-position: outside !default;
 
 // Transition timings

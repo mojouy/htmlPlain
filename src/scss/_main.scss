@@ -94,7 +94,9 @@ h6 {
   text-rendering: $header-text-rendering;
 }
 
-@for $i from 1 through 5 {
+//Iterate through Headings and deal with Media Queries
+
+@for $i from 1 through 6 {
   h#{$i} {
     $font-size: map-get($header-styles, h#{$i});
 
@@ -133,8 +135,9 @@ ul { list-style-type: $list-style-type; }
 
 //Main container class
 .container {
-  margin: 0 auto;
+  margin: 0 rem-calc(20);
   max-width: $global-width;
-
-  @media #{$small-only} { margin: 0 rem-calc(20); }
 }
+
+//Helpers, we shouldn't use important but since is a conditional is fine that overrides the hard way
+.hide--small-only { @media #{$small-only} { display: none !important; } }

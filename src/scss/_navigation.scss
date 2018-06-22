@@ -26,6 +26,7 @@
   .nav__logo { width: rem-calc(90); }//logo
 
   .nav__link {
+    color: $secondary-color;
     font-size: rem-calc(14);
     text-transform: uppercase;
 

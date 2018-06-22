@@ -1,6 +1,7 @@
 //More articles section
 .more-articles {
-  margin-bottom: rem-calc(30);
+  margin: 0 auto rem-calc(30);
+  max-width: $global-width;
 
   .container {
     display: flex;
@@ -8,7 +9,7 @@
     justify-content: space-between;
   }
 
-  .more-articles__thumb {
+  &__thumb {
     width: calc(100% / 3.2);
 
     @media #{$small-only} { width: 100%; }

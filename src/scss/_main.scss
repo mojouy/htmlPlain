@@ -141,3 +141,8 @@ ul { list-style-type: $list-style-type; }
 
 //Helpers, we shouldn't use important but since is a conditional is fine that overrides the hard way
 .hide--small-only { @media #{$small-only} { display: none !important; } }
+
+.show--small-only {
+  display: none;
+  @media #{$small-only} { display: block !important; }
+}

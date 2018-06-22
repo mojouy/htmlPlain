@@ -15,19 +15,19 @@
     color: $white;
   }
 
-  &.btn--block {
+  &--block {
     align-items: center;
     display: flex;
     justify-content: center;
   }
 
-  &.btn--show-small {
+  &--show-small {
     display: none;
     @media #{$small-only} { display: flex; }
   }
 
-  &[class*="btn--icon-"] {
+  &--icon {
     &::before { margin-right: rem-calc(10); }
-    &[class*="-download"]::before { content: url('/src/images/icons/icon_download.svg'); }
+    &-download::before { content: url('/src/images/icons/icon_download.svg'); }
   }
 }//btn

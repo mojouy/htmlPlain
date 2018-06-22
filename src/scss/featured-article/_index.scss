@@ -1,0 +1,25 @@
+//Featured Article
+.featured-article {
+  margin: 0 auto rem-calc(30);
+  max-width: $global-width;
+
+  &__video,
+  &__downloads,
+  &__thumbnails { width: 100%; }
+
+  &__description p { font-weight: $global-weight-bold; }
+
+  @include respond-to(large) {
+    .featured-article__thumbnails { order: 2; }
+
+    .featured-article__video {
+      order: 0;
+      width: 60%;
+    }
+
+    .featured-article__downloads {
+      order: 1;
+      width: 40%;
+    }
+  }//breakpoint large
+}//featured article

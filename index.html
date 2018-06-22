@@ -6,28 +6,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href='icons/favicons/favicon.ico', rel='shortcut icon'></link>
   <link rel="stylesheet" href="dist/css/application.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 <body>
   <section class="nav">
     <div class="container">
       <div class="nav__logo">
         <img src="/src/images/logo.png" alt="">
-      </div>
+      </div><!-- Logo -->
+
       <nav class="nav__menu">
         <a class="nav__link nav__link--active" href="#">Videos</a>
         <a class="nav__link" href="#">Channels</a>
         <a class="nav__link" href="#">Help</a>
         <a class="nav__link" href="#">Join</a>
-      </nav>
+      </nav><!-- Menu -->
     </div>
-  </section>
+  </section><!-- Navigation -->
+
   <section class="featured-article">
     <div class="featured-article__gallery">
       <div class="featured-article__video">
-        <a href="#" class="play-btn"></a>
-        <img src="/src/images/video_cover.jpg" alt="Shark Video Preview">
-      </div>
+        <div class="container">
+          <a href="#" class="play-btn"></a>
+          <img src="/src/images/video_cover.jpg" alt="Shark Video Preview">
+        </div>
+      </div><!-- Article Video -->
+
       <div class="featured-article__thumbnails">
         <div class="container">
           <a class="featured-article__thumbnail" href="#"></a>
@@ -36,67 +41,133 @@
           <a class="featured-article__thumbnail" href="#"></a>
           <a class="featured-article__thumbnail" href="#"></a>
         </div>
-      </div>
+      </div><!-- Featured article thumbnails -->
+
       <div class="featured-article__downloads">
-        <p>downloads</p>
+        <div class="container">
+          <h6 class="hide--small-only">Download Options</h6>
+          <a href="#" class="btn btn--block btn--icon-download btn--show-small">
+            Download
+          </a>
+          <ul class="links-list hide--small-only">
+            <li><a href="#">Mobile LQ - 30fps (1.8GB)</a></li>
+            <li><a href="#">Mobile HQ - 60fps (2.6GB)</a></li>
+            <li><a href="#">Vive / Oculus - 60fps (7GB)</a></li>
+            <li><a href="#">Gear VR - 60fps (3.6GB)</a></li>
+            <li><a href="#">Playstation VR - 60fps (2.6GB)</a></li>
+            <li><a href="#">Daydream View - 60fps (3.6GB)</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="featured-article__description">
-      <div class="container">
+    </div><!-- Featured Article Gallery -->
+    <div class="container">
+      <div class="featured-article__data">
+        <div class="featured-article__rating">
+          <span class="article-score">8.5</span>
+          <div class="rate-menu">
+            <a href="#" class="rate-button rate-button--active"></a>
+            <a href="#" class="rate-button rate-button--dislike"></a>
+          </div>
+        </div>
+        <div class="featured-article__details">
+          <p>Uploaded: October 12, 2017</p>
+          <p>Duration: 35 min.</p>
+          <p>
+            Tags:
+            <a href="#">Animals</a>,
+            <a href="#">Sea</a>,
+            <a href="#">Documentary</a>,
+            <a href="#">Nature</a>
+          </p>
+        </div>
+      </div><!-- Article Data -->
+
+      <div class="featured-article__description">
         <h4>Deep Ocean is the final frontier</h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+          sheets containing Lorem Ipsum passages, and more recently.
+        </p>
+      </div><!-- Article Desc -->
     </div>
-  </section>
+  </section><!-- Featured Article -->
+
   <section class="more-articles">
     <div class="container">
       <div class="more-articles__thumb">
         <div class="article-thumb__image"></div>
         <div class="article-thumb__details">
           <h5>Ut wisi enim ad minim veniam, quis nostrud exerc</h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <div class="article-thumb__desc">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <span class="article-score article-score--small">8.5</span>
+          </div>
         </div>
-      </div>
+      </div><!-- Article Thumb -->
+
       <div class="more-articles__thumb">
         <div class="article-thumb__image"></div>
         <div class="article-thumb__details">
           <h5>Lorem ipsum dolor sit amet,</h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <div class="article-thumb__desc">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <span class="article-score article-score--small">8.5</span>
+          </div>
         </div>
-      </div>
+      </div><!-- Article Thumb -->
+
       <div class="more-articles__thumb">
         <div class="article-thumb__image"></div>
         <div class="article-thumb__details">
           <h5>Ut wisi enim ad minim veniam, quis nostrud exerc</h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <div class="article-thumb__desc">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <span class="article-score article-score--small">8.5</span>
+          </div>
         </div>
-      </div>
+      </div><!-- Article Thumb -->
+
       <div class="more-articles__thumb">
         <div class="article-thumb__image"></div>
         <div class="article-thumb__details">
           <h5>Lorem ipsum dolor sit amet</h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <div class="article-thumb__desc">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <span class="article-score article-score--small">8.5</span>
+          </div>
         </div>
-      </div>
+      </div><!-- Article Thumb -->
+
       <div class="more-articles__thumb">
         <div class="article-thumb__image"></div>
         <div class="article-thumb__details">
           <h5>Ut wisi enim ad minim veniam, quis nostrud exerc</h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <div class="article-thumb__desc">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <span class="article-score article-score--small">8.5</span>
+          </div>
         </div>
-      </div>
+      </div><!-- Article Thumb -->
+
       <div class="more-articles__thumb">
         <div class="article-thumb__image"></div>
         <div class="article-thumb__details">
           <h5>Nam liber tempor cum soluta nobis</h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <div class="article-thumb__desc">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <span class="article-score article-score--small">8.5</span>
+          </div>
         </div>
-      </div>
+      </div><!-- Article Thumb -->
     </div>
     <div class="container">
       <a href="#" class="btn">More Videos</a>
     </div>
-  </section>
+  </section><!-- More Articles section -->
+
   <script src="dist/js/app.min.js"></script>
 </body>
 </html>

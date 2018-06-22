@@ -15,7 +15,7 @@
   }
 
   .article-thumb__image {
-    height: rem-calc(190);
+    height: 32vh;
     width: 100%;
   }
 
@@ -27,8 +27,20 @@
   }
 
   .article-thumb__details {
-    margin-top: rem-calc(15);
+    margin: rem-calc(10) 0 rem-calc(30);
 
-    h5 { margin-bottom: rem-calc(5); }
-  }
+    h5 {
+      margin-bottom: rem-calc(5);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }//title
+
+    p { margin: 0 rem-calc(10) 0 0; }
+
+    .article-thumb__desc {
+      align-items: center;
+      display: flex;
+    }
+  }//article thumb detail
 }//more articles section

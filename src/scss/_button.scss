@@ -3,14 +3,31 @@
   background-color: $primary-color;
   border-radius: rem-calc(4);
   color: $white;
-  font-size: rem-calc(14);
+  font-size: rem-calc(16);
   font-weight: $global-weight-bold;
   line-height: 1;
+  margin-bottom: rem-calc(10);
   padding: rem-calc(12 25);
   transition: background-color $transition-default;
 
   &:hover {
     background-color: $secondary-color;
     color: $white;
+  }
+
+  &.btn--block {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &.btn--show-small {
+    display: none;
+    @media #{$small-only} { display: flex; }
+  }
+
+  &[class*="btn--icon-"] {
+    &::before { margin-right: rem-calc(10); }
+    &[class*="-download"]::before { content: url('/src/images/icons/icon_download.svg'); }
   }
 }//btn

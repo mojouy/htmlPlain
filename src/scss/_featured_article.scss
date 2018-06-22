@@ -10,6 +10,8 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: $sections-spacing;
+
+    @media #{$small-only} { margin-bottom: 0; }
   }
 
   .featured-article__video,
@@ -31,6 +33,8 @@
 
       &:hover { opacity: .5; }
     }//play btn
+
+    @media #{$small-only} { .container { margin: 0; } }
   }//feature video
 
   .featured-article__thumbnails {
@@ -78,6 +82,21 @@
       &:nth-child(1n + 4) { display: none; }
     }
   }//thumbnails
+
+  .featured-article__downloads {
+    margin-top: rem-calc(10);
+
+    h6 {
+      border-bottom: rem-calc(2) solid $secondary-color;
+      display: inline-block;
+      margin-bottom: rem-calc(20);
+      padding-bottom: rem-calc(5);
+    }
+
+    .links-list li:not(:last-of-type) { margin-bottom: rem-calc(5); }
+
+    @include respond-to(large) { margin-top: 0; }
+  }
 
   @include respond-to(large) {
     .featured-article__thumbnails { order: 2; }
